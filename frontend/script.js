@@ -37,8 +37,8 @@ document.getElementById("stockForm").onsubmit=async (e) => {
             })
 
         });
-    }
+    
         const data=await res.json();
         document.getElementById("Prediction").textContent="predicted Stock"+data.predicted_stock+"|"+data.recommendation;
-
+    }
 loadStock();
