@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Management system</h1>
+        <h2>Add products</h2>
+        <form id="stockForm">
+            <input type="text" id="name" placeholder="Product name" required>
+            <input type="number" id="quantity" placeholder="Product quantity" min="0" required>
+            <button type="submit">Add stock</button>
+        </form>
+        <h3>Available stock</h3>
+        <button onclick="loadStock()">View stock</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="stockTable"></tbody>
+        </table> 
+        <h3>AI Stock Prediction</h3>
+        <button onclick="predictStock"></button>
+        <p id="Prediction">
+
+        </p>   
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
