@@ -4,7 +4,7 @@ document.getElementById("stockForm").onsubmit=async (e) => {
     e.preventDefault();
     await fetch(JAVA,{
         method: "POST",
-        headers:{"Content_Type":"application/json"},
+        headers:{"Content-Type":"application/json"},
         body: JSON.stringify(
             {
             name:document.getElementById("name").value,
@@ -30,7 +30,7 @@ document.getElementById("stockForm").onsubmit=async (e) => {
     async function predictStock() {
         const res=await fetch(FLASK,{
             method: "POST",
-            headers:{"Content_Type":"application/json"},
+            headers:{"Content-Type":"application/json"},
             body:JSON.stringify({
                 current_stock:8,
                 daily_sales:3
@@ -39,6 +39,6 @@ document.getElementById("stockForm").onsubmit=async (e) => {
         });
     }
         const data=await res.json();
-        document.getElementById("prediction").textContent="predicted Stock"+data.predicted_stock+"|"+data.recommendation;
+        document.getElementById("Prediction").textContent="predicted Stock"+data.predicted_stock+"|"+data.recommendation;
 
 loadStock();
